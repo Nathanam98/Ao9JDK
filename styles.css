@@ -1,0 +1,76 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner-img {
+    max-width: 100%;
+}
+
+.pacotes-container {
+    padding: 20px;
+}
+
+.pacotes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.pacote {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.pacote img {
+    max-width: 100%;
+}
+
+/* Estilo para o banner */
+.banner {
+    width: 100%;
+    height: 300px; /* Ajuste conforme necessário */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilo para a imagem do banner */
+.banner-img {
+    width: 100%; /* Para garantir que a imagem tenha a largura total do contêiner */
+    height: 100%; /* Para garantir que a imagem tenha a altura total do contêiner */
+    object-fit: cover; /* Para ajustar a imagem de modo que ela cubra todo o contêiner */
+}
+
+

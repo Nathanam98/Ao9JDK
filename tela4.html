@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tela 4: Cadastro de Novo Usuário</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <h3>Cadastro de Novo Usuário</h3>
+                </div>
+                <div class="card-body">
+                    <form id="cadastroForm" method="POST" action="processa_cadastro.php">
+                        <div class="form-group">
+                            <label for="nomeCompleto">Nome Completo</label>
+                            <input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dataNascimento">Data de Nascimento</label>
+                            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <select class="form-control" id="estado" name="estado" required>
+                                <option value="">Selecione</option>
+                                <!-- Adicione opções de estado aqui -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" class="form-control" id="endereco" name="endereco" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Gênero</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genero" id="generoMasculino" value="masculino" required>
+                                <label class="form-check-label" for="generoMasculino">Masculino</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genero" id="generoFeminino" value="feminino" required>
+                                <label class="form-check-label" for="generoFeminino">Feminino</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genero" id="generoOutro" value="outro" required>
+                                <label class="form-check-label" for="generoOutro">Outro</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="interesses">Categorias de Interesse</label><br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="praia" id="interessePraia" name="interesses[]">
+                                <label class="form-check-label" for="interessePraia">Praia</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="campo" id="interesseCampo" name="interesses[]">
+                                <label class="form-check-label" for="interesseCampo">Campo</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="nacionais" id="interesseNacionais" name="interesses[]">
+                                <label class="form-check-label" for="interesseNacionais">Nacionais</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="internacionais" id="interesseInternacionais" name="interesses[]">
+                                <label class="form-check-label" for="interesseInternacionais">Internacionais</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="serra" id="interesseSerra" name="interesses[]">
+                                <label class="form-check-label" for="interesseSerra">Serra</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cidade" id="interesseCidade" name="interesses[]">
+                                <label class="form-check-label" for="interesseCidade">Cidade</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="login">Login</label>
+                            <input type="text" class="form-control" id="login" name="login" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input type="password" class="form-control" id="senha" name="senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

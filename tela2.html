@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tela 2: Detalhes do Pacote</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<style>
+    /* Estilo para limitar a largura da imagem do pacote */
+    #imagemPacote {
+        max-width: 100%; /* Largura máxima igual à largura do contêiner pai */
+        height: auto; /* Altura automática para manter a proporção da imagem */
+        display: block; /* Garante que a imagem não tenha margens extras */
+        margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    }
+    
+    /* Estilo para o botão "Comprar" */
+    .comprar {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        margin: 20px auto; /* Centraliza o botão horizontalmente */
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<!-- Mostra a imagem do pacote selecionado -->
+<div id="detalhesPacote">
+    <h2>Detalhes do Pacote</h2>
+    <h3>Nome do Pacote</h3>
+        <p>Descrição do Pacote.</p>
+        <p>Valor: R$ 1000,00</p>
+    <img id="imagemPacote" src="" alt="Imagem do Pacote">
+    <!-- Botão para comprar o pacote -->
+    <button class="comprar" onclick="comprarPacote()">Comprar</button>
+</div>
+
+<script>
+    // Função para obter o número do pacote a partir da URL
+    function obterNumeroPacote() {
+        var url = new URL(window.location.href);
+        return url.searchParams.get("pacote");
+    }
+
+    // Obtém o número do pacote da URL
+    var numeroPacote = obterNumeroPacote();
+
+    // Define a imagem do pacote com base no número recebido
+    var imagemPacote = document.getElementById("imagemPacote");
+    imagemPacote.src = "fotos/" + numeroPacote + ".jpg";
+
+    // Função para comprar o pacote
+    function comprarPacote() {
+        // Redireciona para a tela de pagamento
+        window.location.href = "tela_pagamento.html";
+    }
+</script>
+
+</body>
+</html>
